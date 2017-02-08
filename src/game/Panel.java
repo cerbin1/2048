@@ -13,12 +13,12 @@ public class Panel {
         panel.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                System.out.println("dd");
+                System.out.println(e.getKeyChar());
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                System.out.println("dd");
+                System.out.println(e.getKeyChar());
             }
 
             @Override
