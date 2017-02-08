@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 class Panel {
-    JPanel createJPanel(JButton[][] jButtons) {
+    JPanel createJPanel(JButton[][] jButtons, Field[][] fields) {
         JPanel panel = new JPanel(new GridLayout(4, 4));
 
         panel.setPreferredSize(new Dimension(400, 400));
@@ -18,8 +18,13 @@ class Panel {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyCode() == 37) {
-                    System.out.println("Wygrales");
+                if (e.getKeyCode() == 40) {
+                    System.out.println("you won");
+                    if (fields[0][0].getValue() == fields[1][0].getValue()) {
+                        fields[1][0].setValue(fields[1][0].getValue() + fields[0][0].getValue());
+                        jButtons[1][0].setText(Integer.toString(fields[1][0].getValue()));
+                    }
+
                 }
             }
 

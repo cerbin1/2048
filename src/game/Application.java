@@ -18,7 +18,7 @@ public class Application {
                 fields[i][j] = new Field(Integer.parseInt(jButtons[i][j].getText()));
             }
         }
-        JPanel jPanel = panel.createJPanel(jButtons);
+        JPanel jPanel = panel.createJPanel(jButtons, fields);
 
         frame.getContentPane().add(jPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
