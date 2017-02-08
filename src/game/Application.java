@@ -4,11 +4,11 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Application {
-    JButton[][] jButtons = new JButton[4][4];
+    private JButton[][] jButtons = new JButton[4][4];
 
-    Panel panel = new Panel();
+    private Panel panel = new Panel();
 
-    void showFrame() {
+    private void showFrame() {
         JFrame frame = new JFrame();
 
         for (int i = 0; i < 4; i++) {
@@ -25,7 +25,7 @@ public class Application {
         frame.pack();
     }
 
-    public JButton createSingleJButton() {
+    private JButton createSingleJButton() {
         JButton jButton = new JButton("2");
         jButton.setPreferredSize(new Dimension(50, 50));
         jButton.setEnabled(false);
