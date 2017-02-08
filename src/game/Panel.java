@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class Panel {
+class Panel {
     JPanel createJPanel(JButton[][] jButtons) {
         JPanel panel = new JPanel(new GridLayout(4, 4));
 
