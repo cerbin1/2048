@@ -12,6 +12,7 @@ public class Application extends JComponent{
                 System.out.println();
             }
         }
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.add(panel);
         frame.setVisible(true);
     }
