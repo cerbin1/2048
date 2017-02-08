@@ -13,17 +13,19 @@ class Panel {
         panel.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                System.out.println(e.getKeyChar());
+
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-                System.out.println(e.getKeyChar());
+                if (e.getKeyCode() == 37) {
+                    System.out.println("Wygrales");
+                }
             }
 
             @Override
             public void keyReleased(KeyEvent e) {
-                System.out.println("dd");
+
             }
         });
 
