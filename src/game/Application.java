@@ -7,7 +7,6 @@ public class Application {
     JButton[][] jButtons = new JButton[4][4];
 
     Panel panel = new Panel();
-    JPanel jPanel = panel.createJPanel(jButtons);
 
     void showFrame() {
         JFrame frame = new JFrame();
@@ -17,19 +16,19 @@ public class Application {
                 jButtons[i][j] = createSingleJButton();
             }
         }
+        JPanel jPanel = panel.createJPanel(jButtons);
 
         frame.getContentPane().add(jPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.add(jPanel);
         frame.setVisible(true);
         frame.pack();
-
     }
-
 
     public JButton createSingleJButton() {
         JButton jButton = new JButton("2");
         jButton.setPreferredSize(new Dimension(50, 50));
+        jButton.setEnabled(false);
         return jButton;
     }
 
