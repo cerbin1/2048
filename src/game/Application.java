@@ -5,6 +5,7 @@ import java.awt.*;
 
 public class Application {
     private JButton[][] jButtons = new JButton[4][4];
+    private Field[][] fields = new Field[4][4];
 
     private Panel panel = new Panel();
 
@@ -14,6 +15,7 @@ public class Application {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 jButtons[i][j] = createSingleJButton();
+                fields[i][j] = new Field(Integer.parseInt(jButtons[i][j].getText()));
             }
         }
         JPanel jPanel = panel.createJPanel(jButtons);

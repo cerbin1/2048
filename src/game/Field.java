@@ -1,4 +1,14 @@
 package game;
 
-public class Field {
+class Field {
+
+    private int value;
+
+    Field(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }
