@@ -1,19 +1,19 @@
 package game;
 
 class Field {
-    private int value;
+    private String value;
     private boolean empty;
 
-    Field(int value) {
+    Field(String value) {
         this.value = value;
         empty = false;
     }
 
-    int getValue() {
+    String getValue() {
         return value;
     }
 
-    void setValue(int value) {
+    void setValue(String value) {
         this.value = value;
     }
 

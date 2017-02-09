@@ -15,7 +15,7 @@ public class Application {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 jButtons[i][j] = createSingleJButton();
-                fields[i][j] = new Field(Integer.parseInt(jButtons[i][j].getText()));
+                fields[i][j] = new Field(jButtons[i][j].getText());
             }
         }
         JPanel jPanel = panel.createJPanel(jButtons, fields);
