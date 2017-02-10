@@ -1,27 +1,25 @@
 package game;
 
 class Field {
-    private String value;
-    private boolean empty;
+    private int value;
 
-    Field(String value) {
-        this.value = value;
-        empty = false;
+    Field() {
+        this(0);
     }
 
-    String getValue() {
+    Field(int value) {
+        this.value = value;
+    }
+
+    int getValue() {
         return value;
     }
 
-    void setValue(String value) {
+    void setValue(int value) {
         this.value = value;
     }
 
-    public boolean isEmpty() {
-        return empty;
-    }
-
-    public void setEmpty(boolean empty) {
-        this.empty = empty;
+    boolean isEmpty() {
+        return value == 0;
     }
 }
