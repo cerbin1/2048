@@ -25,10 +25,17 @@ class Panel {
                             if (Integer.parseInt(fields[3][i].getValue()) == Integer.parseInt(fields[2][i].getValue())) {
                                 System.out.println("3 sie zgadza");
                                 fields[3][i].setValue(Integer.toString(Integer.parseInt(fields[3][i].getValue()) + Integer.parseInt(fields[2][i].getValue())));
-                                fields[2][i].setValue(fields[1][i].getValue());
-                                fields[1][i].setValue(fields[0][i].getValue());
-                                fields[0][i].setValue("");
-                                fields[0][i].setEmpty(true);
+                                if (!fields[1][i].isEmpty()) {
+                                    fields[2][i].setValue(fields[1][i].getValue());
+                                }
+                                if (!fields[0][i].isEmpty()) {
+                                    if(fields[1][i].isEmpty()) {
+
+                                    }
+                                    fields[1][i].setValue(fields[0][i].getValue());
+                                    fields[0][i].setValue("");
+                                    fields[0][i].setEmpty(true);
+                                }
 
                                 displayValues(fields);
                             } else if (!fields[3][i].isEmpty() && !fields[2][i].isEmpty()) {
