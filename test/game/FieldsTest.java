@@ -38,4 +38,18 @@ public class FieldsTest {
         assertEquals(fields.getField(0, 3).getValue(), 4);
         assertEquals(fields.getField(0, 2).getValue(), 0);
     }
+
+    @Test
+    public void shouldMoveFieldsDown() {
+        // given
+        Fields fields = new Fields();
+        fields.getField(0, 0).setValue(2);
+        fields.getField(0, ).setValue(2);
+
+        // when
+
+
+        // then
+
+    }
 }
