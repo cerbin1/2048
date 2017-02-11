@@ -63,7 +63,7 @@ public class FieldsTest {
         assertEquals(fields, fromList(
                 0, 0, 0, 0,
                 0, 0, 0, 0,
-                2, 0, 16, 0,
+                2, 0, 0, 0,
                 4, 2, 16, 32));
     }
 }
