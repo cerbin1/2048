@@ -19,7 +19,15 @@ class Field {
         this.value = value;
     }
 
+    void duplicate() {
+        value *= 2;
+    }
+
     boolean isEmpty() {
         return value == 0;
+    }
+
+    void setEmpty() {
+        value = 0;
     }
 }
