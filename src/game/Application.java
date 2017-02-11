@@ -5,9 +5,7 @@ import java.awt.*;
 
 public class Application {
     private JButton[][] jButtons = new JButton[4][4];
-    private Field[][] fields = new Field[4][4];
 
-    private Panel panel = new Panel();
 
     private void showFrame() {
         JFrame frame = new JFrame();
@@ -15,14 +13,10 @@ public class Application {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 jButtons[i][j] = createSingleJButton();
-                fields[i][j] = new Field(jButtons[i][j].getText());
             }
         }
-        JPanel jPanel = panel.createJPanel(jButtons, fields);
 
-        frame.getContentPane().add(jPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.add(jPanel);
         frame.setVisible(true);
         frame.pack();
     }
