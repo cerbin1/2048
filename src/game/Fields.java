@@ -13,7 +13,7 @@ public class Fields {
         return fields;
     }
 
-    public Field getField(int x, int y) {
+    Field getField(int x, int y) {
         return fields[x][y];
     }
 
