@@ -1,6 +1,6 @@
 package game;
 
-class Field {
+public class Field {
     private int value;
 
     Field() {
@@ -15,7 +15,7 @@ class Field {
         return value;
     }
 
-    void setValue(int value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
@@ -29,5 +29,14 @@ class Field {
 
     void setEmpty() {
         value = 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Field field = (Field) o;
+        return value == field.value;
     }
 }

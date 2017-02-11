@@ -1,5 +1,7 @@
 package game;
 
+import static java.util.Arrays.deepEquals;
+
 public class Fields {
     private Field[][] fields = initializeFields();
 
@@ -13,11 +15,20 @@ public class Fields {
         return fields;
     }
 
-    Field getField(int x, int y) {
+    public Field getField(int x, int y) {
         return fields[x][y];
     }
 
-    public void move(Direction direction) {
+    void move(Direction direction) {
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if ((o == null || getClass() != o.getClass())) return false;
+
+        Fields fields = (Fields) o;
+        return deepEquals(this.fields, fields.fields);
     }
 }
