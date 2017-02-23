@@ -2,7 +2,7 @@ package game;
 
 import static java.util.Arrays.deepEquals;
 
-public class Fields {
+class Fields {
     private Field[][] fields = initializeFields();
 
     private Field[][] initializeFields() {
@@ -15,7 +15,7 @@ public class Fields {
         return fields;
     }
 
-    public Field getField(int x, int y) {
+    Field getField(int x, int y) {
         return fields[x][y];
     }
 

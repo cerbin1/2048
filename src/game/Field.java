@@ -1,13 +1,13 @@
 package game;
 
-public class Field {
+class Field {
     private int value;
 
     Field() {
         this(0);
     }
 
-    Field(int value) {
+    private Field(int value) {
         this.value = value;
     }
 
@@ -15,7 +15,7 @@ public class Field {
         return value;
     }
 
-    public void setValue(int value) {
+    void setValue(int value) {
         this.value = value;
     }
 
