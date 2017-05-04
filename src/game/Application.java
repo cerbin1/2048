@@ -29,6 +29,6 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new Application().showFrame());
+        new Application().showFrame();
     }
 }
